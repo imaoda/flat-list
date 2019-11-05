@@ -1,0 +1,27 @@
+{
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true, // prettier 开关 (不管 eslint fix)
+  "[javascript]": {
+    "editor.formatOnSave": true
+  }, // 防止被全局覆盖
+  "eslint.autoFixOnSave": true, // eslint 自动修复开关
+  "eslint.validate": [
+    "javascript",
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
+    }
+  ],
+  "prettier.singleQuote": true, // js 单引号
+  "prettier.printWidth": 100, // 超过 100 折行,
+  "prettier.trailingComma": "all", // 最后加一个逗号 none(默)|all
+  "prettier.tabWidth": 2, // 默认2
+  "prettier.semi": true, // 结尾分号，默认 true
+  "prettier.arrowParens": "avoid", // 单参箭头函数是否加括号 'avoid(默)|always'
+  "prettier.bracketSpacing": true, // 花括号两边是否加入额外空格，默认 true
+  "prettier.jsxBracketSameLine": false // jsx 花括号两边额外空格，默认 false
+}
