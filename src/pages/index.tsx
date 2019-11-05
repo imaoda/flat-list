@@ -37,6 +37,18 @@ export default class Index extends Component<{}, { data: any[]; showLoading: boo
     close();
   };
 
+  renderItem = index => {
+    const { data } = this.state;
+    const price = data[index];
+    return (
+      <div className="item-suit">
+        <div className="item-logo"></div>
+        <div className="item-name">Apple旗舰店销量排行 No.{index + 1} 商品</div>
+        <div className="item-price">￥{price}</div>
+      </div>
+    );
+  };
+
   render() {
     const header = <div className="slider" />;
     const footer = <div className="loading-more">加载更多...</div>;
@@ -59,7 +71,7 @@ export default class Index extends Component<{}, { data: any[]; showLoading: boo
           onPullDown={this.onPullDown}
           onReachBottom={this.onReachBottom}
         >
-          {index => <div>{index}</div>}
+          {this.renderItem}
         </List>
         {showLoading && (
           <div className="page-loading">
