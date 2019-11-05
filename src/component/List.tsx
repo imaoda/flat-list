@@ -262,7 +262,7 @@ export default class ListHOC extends Component<IProps, IState> {
     const { scrollTop, clientHeight, scrollHeight } = this.dom;
     if (scrollTop + clientHeight > scrollHeight - 1) {
       this.emitEvent();
-    } else if (scrollTop + clientHeight > scrollHeight - 400) {
+    } else if (scrollTop + clientHeight > scrollHeight - 1600) {
       // 由于节流了，在边界时，需加入一些判断来保障
       setTimeout(() => {
         if (this.dom.scrollTop + this.dom.clientHeight > this.dom.scrollHeight - 1) {
