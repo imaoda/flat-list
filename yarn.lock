@@ -12164,6 +12164,11 @@ rc@^1.2.7, rc@^1.2.8:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-content-loader@^4.3.2:
+  version "4.3.2"
+  resolved "https://registry.npm.taobao.org/react-content-loader/download/react-content-loader-4.3.2.tgz#2f6546c883707d399a2abc2efd00edcb8f584618"
+  integrity sha1-L2VGyINwfTmaKrwu/QDty49YRhg=
+
 react-dev-utils@9.0.1:
   version "9.0.1"
   resolved "https://registry.npm.taobao.org/react-dev-utils/download/react-dev-utils-9.0.1.tgz#5c03d85a0b2537d0c46af7165c24a7dfb274bef2"

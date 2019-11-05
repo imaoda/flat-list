@@ -3,8 +3,15 @@ import './index.less';
 
 export default function Loading() {
   return (
-    <svg width="36" height="36" viewBox="0 0 50 50" className="a-loading-android">
-      <circle cx="25" cy="25" r="20" fill="none" stroke="currentColor" stroke-width="5"></circle>
+    <svg width="29" height="39" viewBox="0 0 40 40" className="a-loading-android">
+      <circle
+        cx="20"
+        cy="20"
+        r="16"
+        fill="none"
+        stroke="rgba(255,50,50,1)"
+        strokeWidth="4"
+      ></circle>
     </svg>
   );
 }
