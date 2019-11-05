@@ -1,0 +1,34 @@
+.a-loading {
+  &-android {
+    animation: rotate 2s linear infinite;
+    transform-origin: center center;
+    > circle {
+      display: inline-block;
+      animation: dash 1500ms ease-in-out infinite;
+      stroke-linecap: round; // 端点是圆形
+      color: currentColor;
+    }
+
+    @keyframes rotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes dash {
+      0% {
+        stroke-dasharray: 1, 200;
+      }
+
+      50% {
+        stroke-dasharray: 100, 200;
+        stroke-dashoffset: -45;
+      }
+
+      100% {
+        stroke-dasharray: 100, 200;
+        stroke-dashoffset: -124;
+      }
+    }
+  }
+}
