@@ -24,8 +24,22 @@ export default class Index extends Component<{}, { data: any[]; showLoading: boo
     return new Array(20).fill((Math.random() * 1000).toFixed(0));
   }
 
+  onReachBottom = async () => {
+    const newData = await this.fetchData();
+    const { data } = this.state;
+    const allData = [...data, ...newData];
+    this.setState({ data: allData });
+  };
+
+  onPullDown = async close => {
+    const newData = await this.fetchData();
+    this.setState({ data: newData });
+    close();
+  };
+
   render() {
     const header = <div className="slider" />;
+    const footer = <div className="loading-more">加载更多...</div>;
     const { data, showLoading } = this.state;
     const loading = (
       <div className="loading">
@@ -41,6 +55,9 @@ export default class Index extends Component<{}, { data: any[]; showLoading: boo
           indicator={loading}
           headerSize={160}
           header={header}
+          footer={footer}
+          onPullDown={this.onPullDown}
+          onReachBottom={this.onReachBottom}
         >
           {index => <div>{index}</div>}
         </List>
