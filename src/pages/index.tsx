@@ -46,7 +46,6 @@ export default class Index extends Component<{}, IState> {
   renderItem = index => {
     const { data } = this.state;
     const price = data[index];
-    console.log(11);
     return (
       <div className="item-suit">
         <div className={`item-logo item-img-${(index + parseInt(price)) % 6}`}></div>

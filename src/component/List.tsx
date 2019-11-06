@@ -200,6 +200,7 @@ export default class ListHOC extends Component<IProps, IState> {
       this.blockTouchForAQWHile();
     }
     this.pullDown.startTouchPos = 0;
+    this.pullDown.lastTouchPos = 0;
   };
 
   handleScroll = e => {
