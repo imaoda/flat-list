@@ -210,7 +210,7 @@ export default class ListHOC extends Component<IProps, IState> {
     this.stopHandleScroll = true;
     setTimeout(() => {
       this.stopHandleScroll = false;
-    }, 100);
+    }, 50);
     if (this.state.reachTop) {
       // 滚动出两屏，切换成绝对定位
       if (this.dom.scrollTop > 1600) this.setState({ reachTop: false });
@@ -268,13 +268,13 @@ export default class ListHOC extends Component<IProps, IState> {
     const { scrollTop, clientHeight, scrollHeight } = this.dom;
     if (scrollTop + clientHeight > scrollHeight - 1) {
       this.emitEvent();
-    } else if (scrollTop + clientHeight > scrollHeight - 2400) {
+    } else if (scrollTop + clientHeight > scrollHeight - 1600) {
       // 由于节流了，在边界时，需加入一些判断来保障
       setTimeout(() => {
         if (this.dom.scrollTop + this.dom.clientHeight > this.dom.scrollHeight - 1) {
           this.emitEvent();
         }
-      }, 95);
+      }, 45);
     }
   }
 
