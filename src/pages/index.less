@@ -6,18 +6,20 @@ html,
 body,
 #root {
   height: 100%;
+  font-size: 12px;
 }
 
 .page-home {
   height: 100%;
   .slider {
-    background: url(https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/49121/17/15100/141350/5dc118e9Efe1ea842/4ba0d08a13223b57.jpg);
+    // background: url(https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/49121/17/15100/141350/5dc118e9Efe1ea842/4ba0d08a13223b57.jpg);
+    background: url(//img13.360buyimg.com/cms/jfs/t1/78541/28/12398/414956/5d9c66bcEad7032ae/a3e341e1a55d5c92.jpg);
     height: 160px;
     line-height: 60px;
     text-align: center;
     color: white;
     background-size: cover;
-    background-position: 50%;
+    background-position: 50% 80%;
   }
   .loading {
     display: flex;
@@ -40,15 +42,57 @@ body,
     color: rgba(0, 0, 0, 0.7);
   }
   .item-suit {
+    margin: 5px;
+    display: flex;
+    flex-flow: row nowrap;
+    .text {
+      padding-top: 15px;
+    }
     .item-name {
+      font-size: 14px;
     }
     .item-price {
+      color: #f0250f;
+      font-size: 20px;
+    }
+    .evaluate {
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.7);
+    }
+    .tip {
+      margin: 5px 0;
+    }
+    .tip-info {
+      font-size: 10px;
+      border-radius: 2px;
+      background-color: rgba(0, 0, 0, 0.05);
+      margin: 0px 10px 0px 0px;
+      padding: 1px 3px;
+      color: rgba(0, 0, 0, 0.7);
     }
     .item-logo {
       width: 120px;
       height: 120px;
-      background: url(https://img13.360buyimg.com/n2/s240x240_jfs/t1/59134/31/14456/45896/5db77e44Eb30b3280/4eedd01fe1da789f.jpg);
       background-size: contain;
+      margin-right: 10px;
+    }
+    .item-img-1 {
+      background-image: url(https://img12.360buyimg.com/mobilecms/s316x316_jfs/t1/64512/28/2204/137855/5d079e10Ea7b3cf2a/5f79e5ed1bbc6faf.jpg);
+    }
+    .item-img-2 {
+      background-image: url(https://img12.360buyimg.com/mobilecms/s316x316_jfs/t1/3499/26/13595/200504/5bd8abd0E67f3f7a4/090c8bfb6ce2dbd9.jpg);
+    }
+    .item-img-3 {
+      background-image: url(https://img14.360buyimg.com/mobilecms/s316x316_jfs/t1/44930/32/11428/312100/5d7d9caaEf4f45bf6/cfc4f857e5c1fa0b.jpg);
+    }
+    .item-img-4 {
+      background-image: url(https://img14.360buyimg.com/mobilecms/s316x316_jfs/t23119/74/1267006263/306845/1e75dd0c/5b57e518Na6cd2a16.jpg);
+    }
+    .item-img-5 {
+      background-image: url(https://img13.360buyimg.com/n2/s240x240_jfs/t1/8239/6/14501/233940/5c3ea826Eadc3829f/bfdf02d2a5ddf238.jpg);
+    }
+    .item-img-0 {
+      background-image: url(https://img13.360buyimg.com/n2/s240x240_jfs/t1/59134/31/14456/45896/5db77e44Eb30b3280/4eedd01fe1da789f.jpg);
     }
   }
 }

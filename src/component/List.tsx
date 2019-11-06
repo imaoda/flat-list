@@ -13,6 +13,7 @@ interface IProps {
   onReachBottom: Function; // 触底事件
   onPullDown: Function; // 下拉事件
   indicator: React.ReactNode; // 下拉刷新时上面的菊花
+  version: any; // 用于在 itemCount 相同的情况下，强制刷新
 }
 
 interface IState {
@@ -34,6 +35,7 @@ export default class ListHOC extends Component<IProps, IState> {
     onReachBottom: () => {},
     onPullDown: () => {},
     indicator: <div>刷新中...</div>,
+    version: 0,
   };
 
   state: IState = {
@@ -89,6 +91,7 @@ export default class ListHOC extends Component<IProps, IState> {
   shouldComponentUpdate(nextProps, nextState) {
     // 列表长度变化才更新画布长度，列表的实际渲染其实在 slot 里
     if (nextProps.itemCount !== this.props.itemCount) return true;
+    if (nextProps.version !== this.props.version) return true;
     if (nextState.visibility !== this.state.visibility) return true;
     if (nextState.reachTop !== this.state.reachTop) return true;
     return false;
@@ -262,7 +265,7 @@ export default class ListHOC extends Component<IProps, IState> {
     const { scrollTop, clientHeight, scrollHeight } = this.dom;
     if (scrollTop + clientHeight > scrollHeight - 1) {
       this.emitEvent();
-    } else if (scrollTop + clientHeight > scrollHeight - 1600) {
+    } else if (scrollTop + clientHeight > scrollHeight - 2400) {
       // 由于节流了，在边界时，需加入一些判断来保障
       setTimeout(() => {
         if (this.dom.scrollTop + this.dom.clientHeight > this.dom.scrollHeight - 1) {
