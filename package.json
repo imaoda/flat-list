@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "maro": "^0.0.6",
+    "no-bounce": "0.0.3",
     "react": "^16.8.6",
     "react-content-loader": "^4.3.2",
     "react-dom": "^16.8.6"

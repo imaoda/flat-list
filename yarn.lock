@@ -9846,6 +9846,11 @@ nice-try@^1.0.4:
   resolved "https://registry.npm.taobao.org/nice-try/download/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha1-ozeKdpbOfSI+iPybdkvX7xCJ42Y=
 
+no-bounce@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.npmjs.org/no-bounce/-/no-bounce-0.0.3.tgz#3b8d63a13175a2c031b885bc73a21de9921f34f1"
+  integrity sha512-+9UMVYSLIFXECZtQn7AH7S815ubpsACNI/dB2b6Ks5DXKxrqCvAa9bvDD+gCVN2r0khABMefGSRbK0PfQkSkYQ==
+
 no-case@^2.2.0:
   version "2.3.2"
   resolved "https://registry.npm.taobao.org/no-case/download/no-case-2.3.2.tgz#60b813396be39b3f1288a4c1ed5d1e7d28b464ac"
