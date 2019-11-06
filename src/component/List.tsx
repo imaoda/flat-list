@@ -1,5 +1,9 @@
 import React, { Component, CSSProperties } from 'react';
 
+const na = window.navigator.userAgent;
+const isAdr = na.match(/(android|adr)/i);
+const iswx = na.match(/micromessenger/i);
+
 interface IProps {
   height?: number; // 如果不设置，则默认吃满父元素，比如父元素 flex：1
   itemCount: number; // 刷新过程中不支持减少
@@ -176,6 +180,7 @@ export default class ListHOC extends Component<IProps, IState> {
   };
 
   handleTouchEnd = e => {
+    alert(1111);
     if (!this.pullDown.startTouchPos) return;
     const { startTouchPos, lastTouchPos } = this.pullDown;
     if (startTouchPos && lastTouchPos - startTouchPos > this.indicatorInfo.height + 10) {
